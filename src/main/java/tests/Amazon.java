@@ -20,8 +20,8 @@ public class Amazon extends BaseTest {
     }
 
     @Test(priority = 1)
-    @Parameters({"url", "nameProduct"})
-    public void verifyResults(String urlWeb, String nameProduct){
+    @Parameters({"nameProduct"})
+    public void verifyResults(String nameProduct){
         ResultSearchPage resultSearchPage = new ResultSearchPage(getDriver());
         softAssert.assertEquals(resultSearchPage.verifyProductMention(nameProduct),false, "No product mention in results page");
         resultSearchPage.sortByPrice();
