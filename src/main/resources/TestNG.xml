@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Test" parallel="tests" thread-count="1">
+    <test name="Amazon">
+        <parameter name="browserName" value="Chrome" />
+        <parameter name="url" value="https://www.amazon.com/"/>
+        <parameter name="nameProduct" value="iPhone 11"/>
+        <classes>
+            <class name="tests.Amazon"></class>
+        </classes>
+    </test>
+
+    <test name="Ebay">
+        <parameter name="browserName" value="Chrome" />
+        <parameter name="url" value="https://www.ebay.com/"/>
+        <parameter name="nameProduct" value="iPhone 11"/>
+        <classes>
+            <class name="tests.Ebay"></class>
+        </classes>
+    </test>
+</suite>
